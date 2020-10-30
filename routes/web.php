@@ -41,6 +41,27 @@ Route::get('Categorias/{categoria}','CategoriasControler@show');
 Route::put('Categorias/{categoria}','CategoriasControler@update');
 Route::delete('Categorias/{categoria}','CategoriasControler@destroy');
 Route::get('Categorias/{categoria}/edit','CategoriasControler@edit');
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/index', function () {
+    return view('Layouts.index');
+});
+
+Route::get('/editar', function () {
+    return view('Layouts.editar');
+});
+
+Route::get('/venta', function () {
+    return view('Layouts.venta');
+});
+
+Route::get('/borrar', function () {
+    return view('Layouts.borrar');
+});
 //Route::resource('Categorias','CategoriasControler');
 
 
